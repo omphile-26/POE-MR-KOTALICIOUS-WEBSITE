@@ -3,10 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kotalicious | Menu</title>
-    <link rel="stylesheet" href="css/style.css">
-
-  
+  <title>Kotalicious Menu | Kota and Street Food in Braamfontein</title>
+  <meta name="description" content="Browse the Kotalicious menu of freshly made kotas, chips and township street food in Braamfontein. See our options and order online.">
+  <meta property="og:title" content="Kotalicious Menu | Kota and Street Food">
+  <meta property="og:description" content="Explore kotas, chips and township street food made fresh in Braamfontein.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kotalicious.co.za/menu.html">
+  <link rel="canonical" href="https://kotalicious.co.za/menu.html">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <!-- Header and navigation -->
@@ -15,14 +19,17 @@
       <h1>MR KOTALICIOUS</h1>
     </div>
     <h2>MR KOTALICIOUS || THE KOTA KING</h2>
+    <div class="site-search">
+      <input type="search" id="siteSearch" placeholder="Search this page..." aria-label="Search website content">
+    </div>
     <!-- Menu navigation links -->
     <nav>
      <a href="home.html">Home</a>
       <a href="menu.html">Menu</a>
       <a href="order.html">Order</a>
       <a href="about.html">About</a>
-      <a href="social media.html">Social Media</a>
-      <a href="Find us.html">Find Us</a>
+      <a href="social-media.html">Social Media</a>
+      <a href="find-us.html">Find Us</a>
     </nav>
     <hr color="orange">
   </header>
@@ -33,56 +40,56 @@
     <p>Explore our delicious offerings below:</p>
 
     <div class="menu-grid">
-      <div class="menu-card">
-        <img src="images/25kota.jpeg" srcset="images/25kota.jpeg 1x, images/25kota.jpeg 2x" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Kota Classic">
+      <div class="menu-card" tabindex="0" role="button" aria-label="Open gallery for Kiddies Bites" data-title="Kiddies Bites" data-gallery='["images/kiddies-bites-kota.jpeg","images/tasty-bite-kota.jpeg","images/mjojo-bite-kota.jpeg"]'>
+        <img src="images/kiddies-bites-kota.jpeg" srcset="images/kiddies-bites-kota.jpeg 1x, images/kiddies-bites-kota.jpeg 2x" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Kiddies Bites kota with vienna and polony" loading="lazy" decoding="async">
         <h3>Kiddies Bites</h3>
         <p>Ingredients: Chakalaka / Artchaar, Lettuce, Chips, Vienna, Polony and special sauce</p>
       </div>
 
-      <div class="menu-card">
-        <img src="images/30kota.jpeg" srcset="images/30kota.jpeg 1x, images/30kota.jpeg 2x" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Kota Cheese Delight">
+      <div class="menu-card" tabindex="0" role="button" aria-label="Open gallery for Tasty Bite" data-title="Tasty Bite" data-gallery='["images/tasty-bite-kota.jpeg","images/kiddies-bites-kota.jpeg","images/mjojo-bite-kota.jpeg"]'>
+        <img src="images/tasty-bite-kota.jpeg" srcset="images/tasty-bite-kota.jpeg 1x, images/tasty-bite-kota.jpeg 2x" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Tasty Bite kota with cheese" loading="lazy" decoding="async">
         <h3>Tasty Bite</h3>
         <p>Ingredients: Chakalaka / Artchaar, Lettuce, Chips, Vienna, Polony, cheese and special sauce</p>
       </div>
 
-      <div class="menu-card">
-        <img src="images/35kota.jpeg" srcset="images/35kota.jpeg 1x, images/35kota.jpeg 2x" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Kota Spicy Chicken">
+      <div class="menu-card" tabindex="0" role="button" aria-label="Open gallery for M'jojo Bite" data-title="M'jojo Bite" data-gallery='["images/mjojo-bite-kota.jpeg","images/kotalicious-bite-kota.jpeg","images/tasty-bite-kota.jpeg"]'>
+        <img src="images/mjojo-bite-kota.jpeg" srcset="images/mjojo-bite-kota.jpeg 1x, images/mjojo-bite-kota.jpeg 2x" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="M'jojo Bite kota with russian sausage" loading="lazy" decoding="async">
         <h3>M'jojo Bite</h3>
         <p>Ingredients: Chakalaka / Artchaar, Lettuce, Chips, russian, Polony, cheese and special sauce</p>
       </div>
 
-      <div class="menu-card">
-        <img src="images/45.jpeg" srcset="images/45.jpeg 1x, images/45.jpeg 2x" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Kota king">
+      <div class="menu-card" tabindex="0" role="button" aria-label="Open gallery for Kotalicious Bite" data-title="Kotalicious Bite" data-gallery='["images/kotalicious-bite-kota.jpeg","images/feast-bite-kota.jpeg","images/mjojo-bite-kota.jpeg"]'>
+        <img src="images/kotalicious-bite-kota.jpeg" srcset="images/kotalicious-bite-kota.jpeg 1x, images/kotalicious-bite-kota.jpeg 2x" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Kotalicious Bite with sausage, cheese and egg" loading="lazy" decoding="async">
         <h3>Kotalicious Bite </h3>
         <p>Ingredients: Chakalaka / Artchaar, Lettuce, Chips, russian, Polony, cheese, eggs and special sauce</p>
       </div>
 
-      <div class="menu-card">
-        <img src="images/kota.jpg" srcset="images/kota.jpg 1x, images/kota.jpg 2x" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Kota Beef Extravaganza">
+      <div class="menu-card" tabindex="0" role="button" aria-label="Open gallery for Cheesy Bite" data-title="Cheesy Bite" data-gallery='["images/kota.jpg","images/cheesy-bite-kota.jpeg","images/ribster-bite-kota.jpeg"]'>
+        <img src="images/kota.jpg" srcset="images/kota.jpg 1x, images/kota.jpg 2x" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Cheesy Bite kota with beef patty and melted cheese" loading="lazy" decoding="async">
         <h3>Cheesy Bite</h3>
         <p>Ingredients: Chakalaka / Artchaar, Lettuce, Chips, russian, beef Patty, DOUBLE cheese*2, eggs and special sauce</p>
       </div>
 
-      <div class="menu-card">
-        <img src="images/kota.jpg" srcset="images/kota.jpg 1x, images/kota.jpg 2x" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Kota Chicken Mayo">
+      <div class="menu-card" tabindex="0" role="button" aria-label="Open gallery for Feast Bite" data-title="Feast Bite" data-gallery='["images/feast-bite-kota.jpeg","images/ribster-bite-kota.jpeg","images/kota.jpg"]'>
+        <img src="images/kota.jpg" srcset="images/kota.jpg 1x, images/kota.jpg 2x" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Feast Bite kota with double russian sausage" loading="lazy" decoding="async">
         <h3>Feast Bite</h3>
         <p>Ingredients: Chakalaka / Artchaar, Lettuce, Chips, DOUBLE russian*2, Polony, cheese, eggs and special saucee</p>
       </div>
 
-      <div class="menu-card">
-        <img src="images/70.jpeg" srcset="images/70.jpeg 1x, images/70.jpeg 2x" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Kota Chicken Mayo">
+      <div class="menu-card" tabindex="0" role="button" aria-label="Open gallery for Ribster Bite" data-title="Ribster Bite" data-gallery='["images/ribster-bite-kota.jpeg","images/feast-bite-kota.jpeg","images/bite-my-soul-kota.jpeg"]'>
+        <img src="images/ribster-bite-kota.jpeg" srcset="images/ribster-bite-kota.jpeg 1x, images/ribster-bite-kota.jpeg 2x" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Ribster Bite kota with ribs and cheese" loading="lazy" decoding="async">
         <h3>Ribster Bite</h3>
         <p>Ingredients: Chakalaka / Artchaar, Lettuce, Chips, ribs, Polony,DOUBLE cheese*2, eggs and special saucee</p>
       </div>
 
-      <div class="menu-card">
-        <img src="images/150.jpeg" srcset="images/150.jpeg 1x, images/150.jpeg 2x" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Kota Chicken Mayo">
+      <div class="menu-card" tabindex="0" role="button" aria-label="Open gallery for Bite My Soul" data-title="Bite My Soul" data-gallery='["images/bite-my-soul-kota.jpeg","images/kotalicious-bite-kota.jpeg","images/ribster-bite-kota.jpeg"]'>
+        <img src="images/bite-my-soul-kota.jpeg" srcset="images/bite-my-soul-kota.jpeg 1x, images/bite-my-soul-kota.jpeg 2x" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Bite My Soul loaded kota with patties, sausage and cheese" loading="lazy" decoding="async">
         <h3>Bite My Soul</h3>
         <p>Ingredients: Chakalaka / Artchaar, Lettuce, Chips, DOUBLE russian*2, DOUBLE Polony, DOUBLE cheese*2, Cheesy toppings eggs and special saucee</p>
       </div>
 
-      <div class="menu-card chips-card">
-        <img src="images/kota.jpg" srcset="images/kota.jpg 1x, images/kota.jpg 2x" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Chips" class="chips-image">
+      <div class="menu-card chips-card" tabindex="0" role="button" aria-label="Open gallery for Chips" data-title="CHIPS" data-gallery='["images/kota.jpg","images/feast-bite-kota.jpeg","images/cheesy-bite-kota.jpeg"]'>
+        <img src="images/kota.jpg" srcset="images/kota.jpg 1x, images/kota.jpg 2x" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Chips with toppings and Kotalicious sauce" class="chips-image" loading="lazy" decoding="async">
         <h3>CHIPS</h3>
         <p>Ingredients: Chips, french toppings and special saucee</p>
       </div>
@@ -93,9 +100,21 @@
     </div>
   </main>
 
+  <div class="menu-lightbox" id="menuLightbox" aria-hidden="true">
+    <div class="menu-lightbox-content">
+      <button class="menu-lightbox-close" type="button" aria-label="Close image viewer">×</button>
+      <button class="menu-lightbox-arrow prev" type="button" aria-label="Previous image">‹</button>
+      <div class="menu-lightbox-image-wrap">
+        <img id="menuLightboxImage" src="" alt="Menu item image">
+      </div>
+      <button class="menu-lightbox-arrow next" type="button" aria-label="Next image">›</button>
+    </div>
+  </div>
+
   <footer>
     <hr>
     <p>&copy; 2026 Kotalicious | The Kota King of Braamfontein | OMPHILE MOILOA ST10516816</p>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>

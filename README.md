@@ -7,12 +7,15 @@ kotalicious/
 ├── menu.html            # Menu page
 ├── about.html           # About page
 ├── order.html           # Order page
-├── find us.html         # Find Us page
-├── social media.html    # Social Media page
+├── find-us.html         # Find Us page
+├── social-media.html    # Social Media page
 ├── css/
 │   └── style.css        # Main stylesheet
 ├── images/              # Restaurant and product photos
-├── js/                  # JavaScript files if added later
+├── js/
+│   └── script.js        # Search, galleries, and order interactions
+├── robots.txt           # Search crawler instructions
+├── sitemap.xml          # Public page URLs for search engines
 ├── documents/           # Project documents or references
 ├── README.md            # Project documentation
 └── .git/                # Git repository files
@@ -27,6 +30,8 @@ kotalicious/
 - Social Media page with testimonials, ratings, and Facebook/TikTok links
 - Transparent content panels that keep the background image visible
 - Responsive layout for mobile, tablet, and desktop screens
+- Page-specific SEO titles, descriptions, canonical URLs, and social-sharing metadata
+- Local restaurant structured data, descriptive product image names and alt text, plus crawler files
 
 ## 🔧 Style Notes
 - The stylesheet is now stored in the css folder.

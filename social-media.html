@@ -3,9 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kotalicious | Social Media</title>
-    <link rel="stylesheet" href="css/style.css">
-
+  <title>Kotalicious Reviews and Social Media | Braamfontein</title>
+  <meta name="description" content="Read customer reviews and follow Kotalicious on Facebook and TikTok for kota specials, food updates and behind-the-scenes videos.">
+  <meta property="og:title" content="Kotalicious Reviews and Social Media">
+  <meta property="og:description" content="See what customers say and follow Kotalicious for food updates and specials.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kotalicious.co.za/social-media.html">
+  <link rel="canonical" href="https://kotalicious.co.za/social-media.html">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="social-page">
   <header class="site-header">
@@ -13,13 +18,16 @@
       <h1>MR KOTALICIOUS</h1>
     </div>
     <h2>MR KOTALICIOUS || THE KOTA KING</h2>
+    <div class="site-search">
+      <input type="search" id="siteSearch" placeholder="Search this page..." aria-label="Search website content">
+    </div>
     <nav>
      <a href="home.html">Home</a>
       <a href="menu.html">Menu</a>
       <a href="order.html">Order</a>
       <a href="about.html">About</a>
-      <a href="social media.html">Social Media</a>
-      <a href="Find us.html">Find Us</a>
+      <a href="social-media.html">Social Media</a>
+      <a href="find-us.html">Find Us</a>
     </nav>
     <hr color="orange">
   </header>
@@ -31,8 +39,8 @@
     </div>
 
     <div class="testimonials-container">
-      <div class="testimonial-card">
-          <img src="images/r1.jpeg" alt="Kota Classic" style="max-height: 180px;">
+      <div class="testimonial-card social-gallery-item" tabindex="0" role="button" aria-label="Open social review image" data-gallery='["images/r1.jpeg","images/r2.jpeg","images/r3.jpeg"]'>
+          <img src="images/r1.jpeg" alt="Customer review shared about Kotalicious" style="max-height: 180px;" loading="lazy" decoding="async">
         <div class="stars">⭐⭐⭐⭐⭐</div>
         <p>
           "The best kota I've ever had! Fresh ingredients, amazing flavors, and the service is top-notch. Mr Kotalicious really deserves the title of KOTA KING!"
@@ -46,8 +54,8 @@
         </div>
       </div>
 
-      <div class="testimonial-card">
-          <img src="images/r2.jpeg" alt="Kota Classic" style="max-height: 180px;">
+      <div class="testimonial-card social-gallery-item" tabindex="0" role="button" aria-label="Open social review image" data-gallery='["images/r2.jpeg","images/r3.jpeg","images/r4.jpeg"]'>
+          <img src="images/r2.jpeg" alt="Customer review of Kotalicious in Braamfontein" style="max-height: 180px;" loading="lazy" decoding="async">
         <div class="stars">⭐⭐⭐⭐⭐</div>
         <p>
           "I bring my friends here every weekend. The kotas are huge, delicious, and affordable. This place is a hidden gem in Braamfontein!"
@@ -61,8 +69,8 @@
         </div>
       </div>
 
-      <div class="testimonial-card">
-          <img src="images/r3.jpeg" alt="Kota Classic" style="max-height: 180px;">
+      <div class="testimonial-card social-gallery-item" tabindex="0" role="button" aria-label="Open social review image" data-gallery='["images/r3.jpeg","images/r4.jpeg","images/r5.jpeg"]'>
+          <img src="images/r3.jpeg" alt="Customer review of Kotalicious food" style="max-height: 180px;" loading="lazy" decoding="async">
         <div class="stars">⭐⭐⭐⭐⭐</div>
         <p>
           "The cheesy kota is absolutely fire! Love the quality and the fact that everything is made fresh. Highly recommend!"
@@ -76,8 +84,8 @@
         </div>
       </div>
 
-      <div class="testimonial-card">
-          <img src="images/r4.jpeg" alt="Kota Classic" style="max-height: 180px;">
+      <div class="testimonial-card social-gallery-item" tabindex="0" role="button" aria-label="Open social review image" data-gallery='["images/r4.jpeg","images/r5.jpeg","images/r6.jpeg"]'>
+          <img src="images/r4.jpeg" alt="Customer feedback about Kotalicious" style="max-height: 180px;" loading="lazy" decoding="async">
         <div class="stars">⭐⭐⭐⭐⭐</div>
         <p>
           "I was full like a lion!"
@@ -91,8 +99,8 @@
         </div>
       </div>
 
-      <div class="testimonial-card">
-          <img src="images/r5.jpeg" alt="Kota Classic" style="max-height: 180px;">
+      <div class="testimonial-card social-gallery-item" tabindex="0" role="button" aria-label="Open social review image" data-gallery='["images/r5.jpeg","images/r6.jpeg","images/r1.jpeg"]'>
+          <img src="images/r5.jpeg" alt="Customer review shared with Kotalicious" style="max-height: 180px;" loading="lazy" decoding="async">
         <div class="stars">⭐⭐⭐⭐⭐</div>
         <p>
           "Kotalicious is my go-to spot for lunch. Great taste, reasonable prices, and they remember my order. Authentic street food done right!"
@@ -106,8 +114,8 @@
         </div>
       </div>
 
-      <div class="testimonial-card">
-          <img src="images/r6.jpeg" alt="Kota Classic" style="max-height: 180px;">
+      <div class="testimonial-card social-gallery-item" tabindex="0" role="button" aria-label="Open social review image" data-gallery='["images/r6.jpeg","images/r1.jpeg","images/r2.jpeg"]'>
+          <img src="images/r6.jpeg" alt="Customer review about Kotalicious kotas" style="max-height: 180px;" loading="lazy" decoding="async">
         <div class="stars">⭐⭐⭐⭐⭐</div>
         <p>
           "The king's kota is absolutely worth it! Massive, delicious, and you get what you pay for. Best food in Braamfontein!"
@@ -125,8 +133,19 @@
     <div class="rating-section">
       <h3>Overall Rating</h3>
       <div class="stars">⭐⭐⭐⭐⭐</div>
-        <img src="images/backmenu.jpg" alt="Kota Classic" style="max-height: 180px;">
+        <img src="images/backmenu.jpg" alt="Kotalicious customer rating and food review graphic" style="max-height: 180px;" class="social-gallery-item" tabindex="0" role="button" aria-label="Open rating image" data-gallery='["images/backmenu.jpg","images/r7.jpg","images/r1.jpeg"]' loading="lazy" decoding="async">
       <p>4.9/5 Stars - Based on 500+ Customer Reviews</p>
+    </div>
+
+    <div class="menu-lightbox" id="menuLightbox" aria-hidden="true">
+      <div class="menu-lightbox-content">
+        <button class="menu-lightbox-close" type="button" aria-label="Close image viewer">×</button>
+        <button class="menu-lightbox-arrow prev" type="button" aria-label="Previous image">‹</button>
+        <div class="menu-lightbox-image-wrap">
+          <img id="menuLightboxImage" src="" alt="Gallery image">
+        </div>
+        <button class="menu-lightbox-arrow next" type="button" aria-label="Next image">›</button>
+      </div>
     </div>
 
     <!-- Social media section: Facebook & TikTok links -->
@@ -135,10 +154,10 @@
       
       <!-- Facebook and TikTok buttons -->
       <div class="social-buttons">
-        <a class="social-btn facebook-btn" href="https://www.facebook.com/kotalicious" target="_blank">
+        <a class="social-btn facebook-btn" href="https://www.facebook.com/kotalicious" target="_blank" rel="noopener noreferrer">
           Follow on Facebook : @mrkotalicious
         </a>
-        <a class="social-btn tiktok-btn" href="https://www.tiktok.com/@kotalicious" target="_blank">
+        <a class="social-btn tiktok-btn" href="https://www.tiktok.com/@kotalicious" target="_blank" rel="noopener noreferrer">
           Follow on TikTok : @mrkotalicious
         </a>
       </div>
@@ -150,7 +169,7 @@
           <div>
             Check out our latest posts, updates, and special offers on Facebook. See what other customers are enjoying!
           </div>
-          <a href="https://www.facebook.com/kotalicious" target="_blank">
+          <a href="https://www.facebook.com/kotalicious" target="_blank" rel="noopener noreferrer">
             Visit Facebook
           </a>
           <p>Follow us for daily updates, menu specials, and customer features</p>
@@ -161,7 +180,7 @@
           <div>
             Watch our mouth-watering kota videos and behind-the-scenes content on TikTok. See why we're the KOTA KING!
           </div>
-          <a href="https://www.tiktok.com/@kotalicious" target="_blank">
+          <a href="https://www.tiktok.com/@kotalicious" target="_blank" rel="noopener noreferrer">
             Visit TikTok
           </a>
           <p>Follow for viral food content and customer reactions</p>
@@ -182,5 +201,6 @@
     <hr>
     <p>&copy; 2026 Kotalicious | The Kota King of Braamfontein | OMPHILE MOILOA ST10516816</p>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>

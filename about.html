@@ -3,10 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kotalicious | About Us</title>
-    <link rel="stylesheet" href="css/style.css">
-
- 
+  <title>About Kotalicious | Braamfontein Kota Restaurant</title>
+  <meta name="description" content="Meet Mr Kotalicious by RayTheChef, a Braamfontein restaurant serving affordable kotas and South African township street food since 2022.">
+  <meta property="og:title" content="About Kotalicious | Braamfontein">
+  <meta property="og:description" content="Learn about Mr Kotalicious, our story, chefs and freshly made township street food.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kotalicious.co.za/about.html">
+  <link rel="canonical" href="https://kotalicious.co.za/about.html">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="about-page">
   <!-- Header and main navigation -->
@@ -15,14 +19,17 @@
       <h1>MR KOTALICIOUS</h1>
     </div>
     <h2>ABOUT US</h2>
+    <div class="site-search">
+      <input type="search" id="siteSearch" placeholder="Search this page..." aria-label="Search website content">
+    </div>
     <!-- Navigation links -->
     <nav>
       <a href="home.html">Home</a>
       <a href="menu.html">Menu</a>
       <a href="order.html">Order</a>
       <a href="about.html">About</a>
-      <a href="social media.html">Social Media</a>
-      <a href="Find us.html">Find Us</a>
+      <a href="social-media.html">Social Media</a>
+      <a href="find-us.html">Find Us</a>
     </nav>
     <hr color="orange">
   </header>
@@ -37,9 +44,9 @@
     </p>
 
     <div class="about-gallery">
-      <img src="images/kota1.jpeg" srcset="images/kota1.jpeg 1x, images/kota1.jpeg 2x" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Mr Kotalicious Kota 1">
-      <img src="images/kota2.jpeg" srcset="images/kota2.jpeg 1x, images/kota2.jpeg 2x" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Mr Kotalicious Kota 2">
-      <img src="images/kota3.jpeg" srcset="images/kota3.jpeg 1x, images/kota3.jpeg 2x" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Mr Kotalicious Kota 3">
+      <img src="images/kota1.jpeg" srcset="images/kota1.jpeg 1x, images/kota1.jpeg 2x" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Freshly made Kotalicious kota" loading="lazy" decoding="async">
+      <img src="images/kota2.jpeg" srcset="images/kota2.jpeg 1x, images/kota2.jpeg 2x" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Kota sandwich served at Mr Kotalicious" loading="lazy" decoding="async">
+      <img src="images/kota3.jpeg" srcset="images/kota3.jpeg 1x, images/kota3.jpeg 2x" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" alt="South African township-style kota with toppings" loading="lazy" decoding="async">
     </div>
 
     <p>
@@ -48,7 +55,7 @@
     
     <picture>
       <source media="(max-width: 600px)" srcset="images/chefs.jpg">
-      <img class="about-feature-image" src="images/chefs.jpg" srcset="images/chefs.jpg 1x, images/chefs.jpg 2x" sizes="(max-width: 600px) 100vw, 720px" alt="Our chefs preparing food">
+      <img class="about-feature-image" src="images/chefs.jpg" srcset="images/chefs.jpg 1x, images/chefs.jpg 2x" sizes="(max-width: 600px) 100vw, 720px" alt="Kotalicious chefs preparing fresh food" loading="lazy" decoding="async">
     </picture>
 
     <div class="chefs-section">
@@ -70,12 +77,40 @@
       <li>Friendly service</li>
       <li>Unique recipes you won't find anywhere else</li>
     </ul>
-     <p>TO FIND US CLICK HERE👉: <a href="find us.html">Contact Us</a>.</P>
+
+    <div class="about-contact-strip">
+      <div class="about-contact-item">
+        <span>Email:</span>
+        <strong>info@kotalicious.co.za</strong>
+        <div class="about-contact-actions">
+          <a class="about-action-btn email-btn" href="mailto:info@kotalicious.co.za">Email</a>
+        </div>
+      </div>
+
+      <div class="about-contact-item">
+        <span>Call:</span>
+        <strong>+27 (0)78 788 2985</strong>
+        <div class="about-contact-actions">
+          <a class="about-action-btn call-btn" href="tel:+27787882985">Call</a>
+        </div>
+      </div>
+
+      <div class="about-contact-item">
+        <span>WhatsApp:</span>
+        <strong>+27 78 788 2985</strong>
+        <div class="about-contact-actions">
+          <a class="about-action-btn whatsapp-btn-about" href="https://wa.me/27787882985" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+     <p>TO FIND US CLICK HERE👉: <a href="find-us.html">Contact Us</a>.</P>
   </main>
 
   <footer>
     <hr>
     <p>&copy; 2026 Kotalicious | The Kota King of Braamfontein | OMPHILE MOILOA ST10516816</p>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>

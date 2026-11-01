@@ -3,9 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kotalicious | Home</title>
+  <title>Kotalicious | Kota Restaurant in Braamfontein</title>
+  <meta name="description" content="Enjoy freshly made kotas and township street food at Kotalicious in Braamfontein, Johannesburg. Explore our menu, opening hours and ordering options.">
+  <meta property="og:title" content="Kotalicious | Kota Restaurant in Braamfontein">
+  <meta property="og:description" content="Freshly made kotas and township street food in Braamfontein, Johannesburg.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kotalicious.co.za/home.html">
+  <link rel="canonical" href="https://kotalicious.co.za/home.html">
   <link rel="stylesheet" href="css/style.css">
-
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Mr Kotalicious",
+      "url": "https://kotalicious.co.za/home.html",
+      "email": "info@kotalicious.co.za",
+      "telephone": "+27-78-788-2985",
+      "servesCuisine": ["South African", "Kota", "Township street food"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "25 Biccard Street",
+        "addressLocality": "Braamfontein, Johannesburg",
+        "postalCode": "2001",
+        "addressCountry": "ZA"
+      },
+      "sameAs": [
+        "https://www.facebook.com/kotalicious",
+        "https://www.tiktok.com/@kotalicious"
+      ]
+    }
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -13,13 +40,16 @@
       <h1>MR KOTALICIOUS</h1>
     </div>
     <h2>THE KOTA KING</h2>
+    <div class="site-search">
+      <input type="search" id="siteSearch" placeholder="Search this page..." aria-label="Search website content">
+    </div>
     <nav>
      <a href="home.html">Home</a>
       <a href="menu.html">Menu</a>
       <a href="order.html">Order</a>
       <a href="about.html">About</a>
-      <a href="social media.html">Social Media</a>
-      <a href="Find us.html">Find Us</a>
+      <a href="social-media.html">Social Media</a>
+      <a href="find-us.html">Find Us</a>
     </nav>
     <hr color="orange">
   </header>
@@ -31,7 +61,7 @@
       <h2>The Kotalicious Experience In Braamfontein</h2>
       
       <div class="video-wrap">
-        <video controls autoplay muted loop>
+        <video controls autoplay muted loop preload="none" playsinline>
           <source src="images/kota.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
@@ -70,5 +100,6 @@
     <hr>
     <p>&copy; 2026 Kotalicious | The Kota King of Braamfontein | OMPHILE MOILOA ST10516816</p>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
