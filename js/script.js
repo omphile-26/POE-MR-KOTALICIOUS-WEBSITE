@@ -228,7 +228,7 @@ const updateFooterYear = () => {
 };
 
 const highlightCurrentPage = () => {
-  const currentPage = decodeURIComponent(window.location.pathname.split('/').pop() || 'home.html').toLowerCase();
+  const currentPage = decodeURIComponent(window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
 
   document.querySelectorAll('.site-header nav a').forEach((link) => {
     const href = link.getAttribute('href');
@@ -246,9 +246,9 @@ const setupSearchBar = () => {
   if (!searchInput) return;
 
   const searchMap = {
-    home: 'home.html',
-    homepage: 'home.html',
-    index: 'home.html',
+    home: 'index.html',
+    homepage: 'index.html',
+    index: 'index.html',
     menu: 'menu.html',
     foods: 'menu.html',
     food: 'menu.html',

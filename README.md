@@ -3,7 +3,7 @@
 ## Project Structure
 kotalicious/
 │
-├── home.html            # Home page
+├── index.html           # Home page and default Netlify entry point
 ├── menu.html            # Menu page
 ├── about.html           # About page
 ├── order.html           # Order page
