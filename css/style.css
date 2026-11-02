@@ -702,6 +702,13 @@
       color: #333;
     }
 
+    #pickupTimeHelp {
+      display: block;
+      margin-top: 6px;
+      color: #555;
+      font-size: 0.88rem;
+    }
+
     input,
     textarea {
       width: 100%;

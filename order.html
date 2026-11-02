@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="author" content="Omphile Moiloa">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Order freshly made kotas and chips from Kotalicious in Braamfontein. Choose your favourites, review your total and send your order on WhatsApp.">
+  <meta name="description" content="Order freshly made kotas and chips from Kotalicious in Braamfontein. Choose your favourites, select a collection date and time, and send your order on WhatsApp.">
   <meta property="og:title" content="Order Kotas Online | Kotalicious">
   <meta property="og:description" content="Choose your favourite Kotalicious kotas and send your order on WhatsApp.">
   <meta property="og:type" content="website">
@@ -51,6 +51,15 @@
           <div class="form-group">
             <label for="customerPhone">Phone Number *</label>
             <input type="tel" id="customerPhone" placeholder="e.g., +27 123 456 7890" required>
+          </div>
+          <div class="form-group">
+            <label for="pickupDate">Collection Date *</label>
+            <input type="date" id="pickupDate" required>
+          </div>
+          <div class="form-group">
+            <label for="pickupTime">Collection Time *</label>
+            <input type="time" id="pickupTime" aria-describedby="pickupTimeHelp" required>
+            <small id="pickupTimeHelp">Collection is available daily from 10:00 AM to 9:00 PM.</small>
           </div>
           <div class="form-group">
             <label for="customerAddress">Delivery Address (Optional)</label>

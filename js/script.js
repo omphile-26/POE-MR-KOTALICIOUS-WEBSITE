@@ -63,6 +63,93 @@ const validateCustomerDetails = () => {
   return valid;
 };
 
+const validatePickupSelection = () => {
+  const pickupDate = document.getElementById('pickupDate');
+  const pickupTime = document.getElementById('pickupTime');
+
+  if (!pickupDate || !pickupTime) return true;
+
+  let valid = true;
+  const now = new Date();
+  const today = [
+    now.getFullYear(),
+    String(now.getMonth() + 1).padStart(2, '0'),
+    String(now.getDate()).padStart(2, '0'),
+  ].join('-');
+
+  if (!pickupDate.value) {
+    setError(pickupDate, 'Please choose a collection date.');
+    valid = false;
+  } else if (pickupDate.value < today) {
+    setError(pickupDate, 'Please choose today or a later date.');
+    valid = false;
+  } else {
+    setError(pickupDate, '');
+  }
+
+  if (!pickupTime.value) {
+    setError(pickupTime, 'Please choose a collection time.');
+    valid = false;
+  } else if (pickupTime.value < '10:00' || pickupTime.value > '21:00') {
+    setError(pickupTime, 'Collection times are 10:00 AM to 9:00 PM.');
+    valid = false;
+  } else {
+    setError(pickupTime, '');
+  }
+
+  if (
+    pickupDate.value &&
+    pickupDate.value >= today &&
+    pickupTime.value >= '10:00' &&
+    pickupTime.value <= '21:00'
+  ) {
+    const collectionDateTime = new Date(`${pickupDate.value}T${pickupTime.value}`);
+    if (collectionDateTime <= new Date()) {
+      setError(pickupTime, 'Please choose a future time between 10:00 AM and 9:00 PM.');
+      valid = false;
+    }
+  }
+
+  return valid;
+};
+
+const setupPickupFields = () => {
+  const pickupDate = document.getElementById('pickupDate');
+  const pickupTime = document.getElementById('pickupTime');
+
+  if (!pickupDate || !pickupTime) return;
+
+  const getLocalDate = (date) => {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  };
+
+  const updateTimeLimits = () => {
+    const now = new Date();
+    const currentTime = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+    pickupTime.min = pickupDate.value === getLocalDate(now) && currentTime > '10:00'
+      ? currentTime
+      : '10:00';
+    pickupTime.max = '21:00';
+  };
+
+  pickupDate.min = getLocalDate(new Date());
+  pickupDate.addEventListener('change', updateTimeLimits);
+  pickupTime.addEventListener('change', () => {
+    if (pickupTime.value && (pickupTime.value < '10:00' || pickupTime.value > '21:00')) {
+      const message = 'Please choose a collection time between 10:00 AM and 9:00 PM.';
+      setError(pickupTime, 'Collection times are 10:00 AM to 9:00 PM.');
+      window.alert(message);
+      return;
+    }
+
+    validatePickupSelection();
+  });
+  updateTimeLimits();
+};
+
 const updateOpenStatus = () => {
   const statusDisplay = document.getElementById('statusDisplay');
   if (!statusDisplay) return;
@@ -141,11 +228,15 @@ const sendOrderToWhatsApp = () => {
   const customerPhone = document.getElementById('customerPhone');
   const customerAddress = document.getElementById('customerAddress');
   const customerNotes = document.getElementById('customerNotes');
+  const pickupDate = document.getElementById('pickupDate');
+  const pickupTime = document.getElementById('pickupTime');
   const whatsappBtn = document.getElementById('whatsappBtn');
 
   if (!whatsappBtn) return;
 
-  if (!validateCustomerDetails()) {
+  const customerDetailsValid = validateCustomerDetails();
+  const pickupSelectionValid = validatePickupSelection();
+  if (!customerDetailsValid || !pickupSelectionValid) {
     return;
   }
 
@@ -175,11 +266,18 @@ const sendOrderToWhatsApp = () => {
   const phone = customerPhone?.value.trim() || 'Not Provided';
   const address = customerAddress?.value.trim() || 'No delivery address provided';
   const notes = customerNotes?.value.trim() || 'No special notes';
+  const collectionDate = new Intl.DateTimeFormat('en-ZA', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  }).format(new Date(`${pickupDate.value}T00:00:00`));
 
   const whatsappMessage = [
     `Hello Mr Kotalicious, my name is ${customer}.`,
     `Phone: ${phone}`,
     `Delivery address: ${address}`,
+    `Collection date: ${collectionDate}`,
+    `Collection time: ${pickupTime.value}`,
     `Order: ${selectedItems.join('; ')}`,
     `Special notes: ${notes}`,
   ].join('\n');
@@ -649,6 +747,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateOpenStatus();
   setupSearchBar();
   setupQuantityControls();
+  setupPickupFields();
   setupMenuLightbox();
   setupAboutSlideshow();
   renderOrderSummary();
