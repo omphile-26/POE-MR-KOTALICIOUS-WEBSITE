@@ -412,7 +412,7 @@ const setupSearchBar = () => {
     { label: 'Order', page: 'order.html' },
     { label: 'Prices', page: 'order.html' },
     { label: 'Location', page: 'find-us.html' },
-    { label: 'Find Us', page: 'find-us.html' },
+    { label: 'Contact Us', page: 'find-us.html' },
     { label: 'About', page: 'about.html' },
     { label: 'Social Media', page: 'social-media.html' },
     { label: 'Phone', page: 'find-us.html' },
