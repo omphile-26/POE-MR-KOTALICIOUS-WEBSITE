@@ -594,7 +594,7 @@ const setupAboutSlideshow = () => {
 
     if (prefersReducedMotion || isPaused || isHovered || isFocused || document.hidden) return;
 
-    timer = window.setInterval(() => showSlide(currentIndex + 1), 5000);
+    timer = window.setInterval(() => showSlide(currentIndex + 1), 2000);
   };
 
   buttons.forEach((button) => {
