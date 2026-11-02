@@ -227,6 +227,33 @@ const updateFooterYear = () => {
   });
 };
 
+const updateLiveDateTime = () => {
+  const dateTimeFormatter = new Intl.DateTimeFormat('en', {
+    day: '2-digit',
+    month: 'long',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true,
+  });
+
+  const updateClock = () => {
+    const now = new Date();
+    const parts = dateTimeFormatter.formatToParts(now);
+    const values = Object.fromEntries(parts.map(({ type, value }) => [type, value]));
+    const display = `${values.day}-${values.month}-${values.year}; ${values.hour}:${values.minute}:${values.second} ${values.dayPeriod}`;
+
+    document.querySelectorAll('.live-date-time').forEach((clock) => {
+      clock.textContent = display;
+      clock.dateTime = now.toISOString();
+    });
+  };
+
+  updateClock();
+  window.setInterval(updateClock, 1000);
+};
+
 const highlightCurrentPage = () => {
   const currentPage = decodeURIComponent(window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
 
@@ -615,6 +642,7 @@ const setupAboutSlideshow = () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   updateFooterYear();
+  updateLiveDateTime();
   highlightCurrentPage();
   updateOpenStatus();
   setupSearchBar();
