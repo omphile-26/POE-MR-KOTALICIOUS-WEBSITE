@@ -983,6 +983,20 @@
       max-width: 920px;
     }
 
+    .about-page .about-slide {
+      min-width: 0;
+      margin: 0;
+    }
+
+    .about-page .about-gallery.is-ready {
+      display: block;
+      max-width: 300px;
+    }
+
+    .about-page .about-gallery.is-ready .about-slide[hidden] {
+      display: none;
+    }
+
     .about-page .about-gallery img,
     .about-page .about-feature-image {
       width: 100%;
@@ -994,6 +1008,51 @@
       display: block;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       animation: fadeInUp 0.8s ease-out both;
+    }
+
+    .about-page .about-gallery.is-ready .about-slide img {
+      height: 240px;
+      object-fit: cover;
+    }
+
+    .about-page .about-slideshow-controls {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .about-page .about-gallery.is-ready .about-slideshow-controls {
+      display: flex;
+    }
+
+    .about-page .about-slide-button {
+      min-width: 44px;
+      min-height: 44px;
+      padding: 8px 14px;
+      border: 0;
+      border-radius: 999px;
+      background: #d84315;
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .about-page .about-slide-button:hover {
+      background: #b8320c;
+      transform: translateY(-1px);
+    }
+
+    .about-page .about-slide-count {
+      min-width: 48px;
+      color: #444;
+      font-weight: 700;
+    }
+
+    .about-page .about-slide-toggle {
+      min-width: 92px;
     }
 
     .about-page .about-gallery img:hover,

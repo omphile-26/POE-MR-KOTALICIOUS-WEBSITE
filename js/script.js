@@ -527,6 +527,92 @@ const setupMenuLightbox = () => {
   }, { passive: true });
 };
 
+const setupAboutSlideshow = () => {
+  const slideshow = document.querySelector('.about-gallery');
+  if (!slideshow) return;
+
+  const slides = [...slideshow.querySelectorAll('.about-slide')];
+  const controls = slideshow.querySelector('.about-slideshow-controls');
+  const count = slideshow.querySelector('.about-slide-count');
+  const buttons = [...slideshow.querySelectorAll('[data-slide-direction]')];
+  const toggleButton = slideshow.querySelector('.about-slide-toggle');
+
+  if (slides.length < 2 || !controls || !count || buttons.length !== 2 || !toggleButton) return;
+
+  const prefersReducedMotion = window.matchMedia
+    && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  toggleButton.hidden = Boolean(prefersReducedMotion);
+  let currentIndex = 0;
+  let timer = null;
+  let isHovered = false;
+  let isFocused = false;
+  let isPaused = false;
+
+  const showSlide = (index) => {
+    currentIndex = (index + slides.length) % slides.length;
+
+    slides.forEach((slide, slideIndex) => {
+      slide.hidden = slideIndex !== currentIndex;
+      slide.setAttribute('aria-label', `${slideIndex + 1} of ${slides.length}`);
+    });
+
+    count.textContent = `${currentIndex + 1} / ${slides.length}`;
+  };
+
+  const updateAutoplay = () => {
+    if (timer !== null) {
+      window.clearInterval(timer);
+      timer = null;
+    }
+
+    if (prefersReducedMotion || isPaused || isHovered || isFocused || document.hidden) return;
+
+    timer = window.setInterval(() => showSlide(currentIndex + 1), 5000);
+  };
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      showSlide(currentIndex + Number(button.dataset.slideDirection));
+      updateAutoplay();
+    });
+  });
+
+  toggleButton.addEventListener('click', () => {
+    isPaused = !isPaused;
+    toggleButton.textContent = isPaused ? 'Resume' : 'Pause';
+    toggleButton.setAttribute('aria-label', `${isPaused ? 'Resume' : 'Pause'} slideshow`);
+    updateAutoplay();
+  });
+
+  slideshow.addEventListener('mouseenter', () => {
+    isHovered = true;
+    updateAutoplay();
+  });
+
+  slideshow.addEventListener('mouseleave', () => {
+    isHovered = false;
+    updateAutoplay();
+  });
+
+  slideshow.addEventListener('focusin', () => {
+    isFocused = true;
+    updateAutoplay();
+  });
+
+  slideshow.addEventListener('focusout', (event) => {
+    if (!slideshow.contains(event.relatedTarget)) {
+      isFocused = false;
+      updateAutoplay();
+    }
+  });
+
+  document.addEventListener('visibilitychange', updateAutoplay);
+
+  showSlide(0);
+  slideshow.classList.add('is-ready');
+  updateAutoplay();
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   updateFooterYear();
   highlightCurrentPage();
@@ -534,6 +620,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupSearchBar();
   setupQuantityControls();
   setupMenuLightbox();
+  setupAboutSlideshow();
   renderOrderSummary();
 
   const customerName = document.getElementById('customerName');

@@ -51,6 +51,28 @@ Capture browser device-emulation screenshots at these viewport sizes for submiss
 | Mobile: 390 x 844 | Single-column cards, wrapping navigation and buttons, responsive images and map |
 
 ## 📝 Change Log
+### Part 2 Improvement
+
+#### CSS
+- Turned the About page photo gallery into a slideshow layout while keeping the active image close to the original gallery tile size (up to 300px wide by 240px high).
+- Styled the slideshow navigation and pause/resume controls to match the site colours, with clear hover and focus states and touch-friendly button sizes.
+- Kept the original gallery grid as the fallback layout until the slideshow JavaScript is ready.
+
+#### JavaScript and About Page
+- Added a six-image slideshow using photos already in the project.
+- Added previous/next navigation, a slide counter, and automatic slide changes every five seconds.
+- Added pause/resume controls; autoplay pauses while the slideshow is hovered, focused, or the browser tab is hidden.
+- Respects the visitor's reduced-motion preference by disabling autoplay.
+- Added accessible labels for the slideshow, slides, and controls, with image descriptions for screen readers.
+
+### Part 3 — Things to Complete
+- [ ] Check the About page slideshow at desktop, tablet, and mobile sizes; confirm the images are up to 300px by 240px and fit their containers.
+- [ ] Test previous/next buttons, first/last slide wrapping, the slide counter, and pause/resume.
+- [ ] Confirm autoplay pauses on hover, keyboard focus, and hidden browser tabs, and does not start when reduced motion is enabled.
+- [ ] Check keyboard-only operation, visible focus indicators, and screen-reader labels.
+- [ ] Verify every slideshow image loads and that the remaining About page content still displays correctly.
+- [ ] Run JavaScript syntax and whitespace checks when the required validation tools are available.
+
 ### 2026-09-17
 - Finished the order page styling with a polished branded layout, quantity controls, and sticky summary panel.
 - Improved the About page image layout and gallery styling for consistent sizing and spacing.
