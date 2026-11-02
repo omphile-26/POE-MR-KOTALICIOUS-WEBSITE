@@ -975,6 +975,7 @@
       font-size: 1.04rem;
     }
 
+    /* About page slideshow layout and controls. */
     .about-page .about-gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -1924,6 +1925,7 @@ main {
 @media (max-width: 600px) {
   body {
     font-size: 0.95rem;
+    /* Keep the background sized to the mobile viewport. */
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;

@@ -227,6 +227,7 @@ const updateFooterYear = () => {
   });
 };
 
+// Updates the footer clock every second.
 const updateLiveDateTime = () => {
   const dateTimeFormatter = new Intl.DateTimeFormat('en', {
     day: '2-digit',
@@ -554,6 +555,7 @@ const setupMenuLightbox = () => {
   }, { passive: true });
 };
 
+// Handles About page slide controls and autoplay.
 const setupAboutSlideshow = () => {
   const slideshow = document.querySelector('.about-gallery');
   if (!slideshow) return;
