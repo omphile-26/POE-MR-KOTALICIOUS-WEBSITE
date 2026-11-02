@@ -50,10 +50,10 @@ const validateCustomerDetails = () => {
 
   if (customerPhone) {
     const phoneValue = customerPhone.value.trim();
-    const phonePattern = /^(\+27|0)[0-9\s-]{9,}$/;
+    const phonePattern = /^[0-9]{10}$/;
 
     if (!phonePattern.test(phoneValue)) {
-      setError(customerPhone, 'Please enter a valid South African phone number.');
+      setError(customerPhone, 'Please enter exactly 10 digits (e.g., 0123456789).');
       valid = false;
     } else {
       setError(customerPhone, '');
